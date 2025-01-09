@@ -13,7 +13,12 @@ class CircularBufferDeque:
         return self.buffer.popleft()
 
     def __str__(self):
-        return str(self.buffer)
+        return " ".join(
+            map(
+                str,
+                self.buffer
+            )
+        )
 
 # Test
 queue = CircularBufferDeque(5)
